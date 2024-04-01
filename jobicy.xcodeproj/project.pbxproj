@@ -13,6 +13,7 @@
 		4305D68F2BBB34770053E120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4305D68D2BBB34770053E120 /* Main.storyboard */; };
 		4305D6912BBB347C0053E120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4305D6902BBB347C0053E120 /* Assets.xcassets */; };
 		4305D6942BBB347C0053E120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4305D6922BBB347C0053E120 /* LaunchScreen.storyboard */; };
+		4305D6A02BBB3A040053E120 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D69F2BBB3A040053E120 /* NetworkProvider.swift */; };
 		DBD94C88EAD99998D4D6A24B /* Pods_jobicy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F367F08A3C64AED021FF942E /* Pods_jobicy.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		4305D6902BBB347C0053E120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4305D6932BBB347C0053E120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4305D6952BBB347C0053E120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4305D69F2BBB3A040053E120 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		50FC24613181F3F52699B0D0 /* Pods-jobicy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jobicy.debug.xcconfig"; path = "Target Support Files/Pods-jobicy/Pods-jobicy.debug.xcconfig"; sourceTree = "<group>"; };
 		841F1AB4DDED0DDC4FFC8C36 /* Pods-jobicy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jobicy.release.xcconfig"; path = "Target Support Files/Pods-jobicy/Pods-jobicy.release.xcconfig"; sourceTree = "<group>"; };
 		F367F08A3C64AED021FF942E /* Pods_jobicy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jobicy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,10 @@
 		4305D6862BBB34770053E120 /* jobicy */ = {
 			isa = PBXGroup;
 			children = (
+				4305D69E2BBB39DD0053E120 /* NetworkLayer */,
+				4305D69B2BBB394D0053E120 /* Model */,
+				4305D69C2BBB39C00053E120 /* View */,
+				4305D69D2BBB39C80053E120 /* ViewModel */,
 				4305D6872BBB34770053E120 /* AppDelegate.swift */,
 				4305D6892BBB34770053E120 /* SceneDelegate.swift */,
 				4305D68B2BBB34770053E120 /* ViewController.swift */,
@@ -74,13 +80,41 @@
 			path = jobicy;
 			sourceTree = "<group>";
 		};
+		4305D69B2BBB394D0053E120 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4305D69C2BBB39C00053E120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4305D69D2BBB39C80053E120 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4305D69E2BBB39DD0053E120 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				4305D69F2BBB3A040053E120 /* NetworkProvider.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
 		7F65D91FDD20608FB6080193 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				50FC24613181F3F52699B0D0 /* Pods-jobicy.debug.xcconfig */,
 				841F1AB4DDED0DDC4FFC8C36 /* Pods-jobicy.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,6 +137,7 @@
 				4305D6802BBB34770053E120 /* Sources */,
 				4305D6812BBB34770053E120 /* Frameworks */,
 				4305D6822BBB34770053E120 /* Resources */,
+				3BD2B933AEB643438AD4F76E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +195,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3BD2B933AEB643438AD4F76E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jobicy/Pods-jobicy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jobicy/Pods-jobicy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jobicy/Pods-jobicy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		76275BE96BAED12D1499ACDB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4305D68C2BBB34770053E120 /* ViewController.swift in Sources */,
+				4305D6A02BBB3A040053E120 /* NetworkProvider.swift in Sources */,
 				4305D6882BBB34770053E120 /* AppDelegate.swift in Sources */,
 				4305D68A2BBB34770053E120 /* SceneDelegate.swift in Sources */,
 			);
@@ -347,6 +400,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,6 +430,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
