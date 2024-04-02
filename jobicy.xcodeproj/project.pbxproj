@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		4305D6882BBB34770053E120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D6872BBB34770053E120 /* AppDelegate.swift */; };
 		4305D68A2BBB34770053E120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D6892BBB34770053E120 /* SceneDelegate.swift */; };
-		4305D68C2BBB34770053E120 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D68B2BBB34770053E120 /* ViewController.swift */; };
 		4305D68F2BBB34770053E120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4305D68D2BBB34770053E120 /* Main.storyboard */; };
 		4305D6912BBB347C0053E120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4305D6902BBB347C0053E120 /* Assets.xcassets */; };
 		4305D6942BBB347C0053E120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4305D6922BBB347C0053E120 /* LaunchScreen.storyboard */; };
 		4305D6A02BBB3A040053E120 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D69F2BBB3A040053E120 /* NetworkProvider.swift */; };
+		4305D6A22BBB43580053E120 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D6A12BBB43580053E120 /* JobModel.swift */; };
+		4305D6A42BBB44300053E120 /* RemoteJobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D6A32BBB44300053E120 /* RemoteJobViewModel.swift */; };
+		4305D6A62BBB44520053E120 /* RemoteJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D6A52BBB44520053E120 /* RemoteJobViewController.swift */; };
+		4305D6A82BBB44770053E120 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D6A72BBB44770053E120 /* NetworkService.swift */; };
+		4305D6AA2BBB454D0053E120 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D6A92BBB454D0053E120 /* Result.swift */; };
+		4364BB1C2BBC19D200B1F50F /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364BB1B2BBC19D200B1F50F /* FavoriteViewController.swift */; };
+		4364BB1E2BBC19E900B1F50F /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364BB1D2BBC19E900B1F50F /* FavoriteViewModel.swift */; };
+		4364BB202BBC1AD700B1F50F /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364BB1F2BBC1AD700B1F50F /* JobTableViewCell.swift */; };
 		DBD94C88EAD99998D4D6A24B /* Pods_jobicy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F367F08A3C64AED021FF942E /* Pods_jobicy.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +28,19 @@
 		4305D6842BBB34770053E120 /* jobicy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jobicy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4305D6872BBB34770053E120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4305D6892BBB34770053E120 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4305D68B2BBB34770053E120 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4305D68E2BBB34770053E120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4305D6902BBB347C0053E120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4305D6932BBB347C0053E120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4305D6952BBB347C0053E120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4305D69F2BBB3A040053E120 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		4305D6A12BBB43580053E120 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		4305D6A32BBB44300053E120 /* RemoteJobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteJobViewModel.swift; sourceTree = "<group>"; };
+		4305D6A52BBB44520053E120 /* RemoteJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteJobViewController.swift; sourceTree = "<group>"; };
+		4305D6A72BBB44770053E120 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4305D6A92BBB454D0053E120 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4364BB1B2BBC19D200B1F50F /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		4364BB1D2BBC19E900B1F50F /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		4364BB1F2BBC1AD700B1F50F /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		50FC24613181F3F52699B0D0 /* Pods-jobicy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jobicy.debug.xcconfig"; path = "Target Support Files/Pods-jobicy/Pods-jobicy.debug.xcconfig"; sourceTree = "<group>"; };
 		841F1AB4DDED0DDC4FFC8C36 /* Pods-jobicy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jobicy.release.xcconfig"; path = "Target Support Files/Pods-jobicy/Pods-jobicy.release.xcconfig"; sourceTree = "<group>"; };
 		F367F08A3C64AED021FF942E /* Pods_jobicy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jobicy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +85,6 @@
 				4305D69D2BBB39C80053E120 /* ViewModel */,
 				4305D6872BBB34770053E120 /* AppDelegate.swift */,
 				4305D6892BBB34770053E120 /* SceneDelegate.swift */,
-				4305D68B2BBB34770053E120 /* ViewController.swift */,
 				4305D68D2BBB34770053E120 /* Main.storyboard */,
 				4305D6902BBB347C0053E120 /* Assets.xcassets */,
 				4305D6922BBB347C0053E120 /* LaunchScreen.storyboard */,
@@ -83,6 +96,7 @@
 		4305D69B2BBB394D0053E120 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4305D6A12BBB43580053E120 /* JobModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +104,9 @@
 		4305D69C2BBB39C00053E120 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4305D6A52BBB44520053E120 /* RemoteJobViewController.swift */,
+				4364BB1B2BBC19D200B1F50F /* FavoriteViewController.swift */,
+				4364BB1F2BBC1AD700B1F50F /* JobTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,6 +114,8 @@
 		4305D69D2BBB39C80053E120 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4305D6A32BBB44300053E120 /* RemoteJobViewModel.swift */,
+				4364BB1D2BBC19E900B1F50F /* FavoriteViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -105,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				4305D69F2BBB3A040053E120 /* NetworkProvider.swift */,
+				4305D6A72BBB44770053E120 /* NetworkService.swift */,
+				4305D6A92BBB454D0053E120 /* Result.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -241,10 +262,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4305D68C2BBB34770053E120 /* ViewController.swift in Sources */,
+				4305D6AA2BBB454D0053E120 /* Result.swift in Sources */,
+				4305D6A22BBB43580053E120 /* JobModel.swift in Sources */,
+				4305D6A82BBB44770053E120 /* NetworkService.swift in Sources */,
+				4364BB1C2BBC19D200B1F50F /* FavoriteViewController.swift in Sources */,
+				4364BB202BBC1AD700B1F50F /* JobTableViewCell.swift in Sources */,
+				4305D6A42BBB44300053E120 /* RemoteJobViewModel.swift in Sources */,
 				4305D6A02BBB3A040053E120 /* NetworkProvider.swift in Sources */,
+				4305D6A62BBB44520053E120 /* RemoteJobViewController.swift in Sources */,
 				4305D6882BBB34770053E120 /* AppDelegate.swift in Sources */,
 				4305D68A2BBB34770053E120 /* SceneDelegate.swift in Sources */,
+				4364BB1E2BBC19E900B1F50F /* FavoriteViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
