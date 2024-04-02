@@ -8,25 +8,57 @@
 import UIKit
 
 class RemoteJobViewController: UIViewController {
-
+    
+    private let viewModel = RemoteJobViewModel()
+    private let tableView = UITableView()
+    
+    private var jobs: [Job] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        NetworkService.shared.fetchJobs { result in
-            print(result)
-        }
+        print("Start")
+        setupTableView()
+        fetchJobs()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupTableView() {
+        view.addSubview(tableView)
+        tableView.register(JobTableViewCell.self, forCellReuseIdentifier: "JobCell")
+        tableView.tableFooterView = UIView()
+        
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        // Enable automatic row height
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 200 // Adjust the estimated row height as needed
+        tableView.delegate = self
+        tableView.dataSource = self
+        
     }
-    */
+    
+    private func fetchJobs() {
+        
+        viewModel.fetchJobs { [weak self] in
+            self?.tableView.reloadData()
+        }
+        
+    }
+}
 
+extension RemoteJobViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        print(viewModel.numberOfJobs)
+        return viewModel.numberOfJobs
+    }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath) as! JobTableViewCell
+            let job = viewModel.job(at: indexPath.row)
+            print(job)
+            cell.configure(with: job)
+            return cell
+        }
 }

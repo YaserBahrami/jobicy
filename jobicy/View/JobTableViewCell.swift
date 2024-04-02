@@ -14,7 +14,7 @@ class JobTableViewCell: UITableViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.textColor = .white
+        label.textColor = .black
         label.numberOfLines = 0
 
         return label
@@ -22,7 +22,7 @@ class JobTableViewCell: UITableViewCell {
     private let companyNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.textColor = .white
+        label.textColor = .black
         label.numberOfLines = 0
 
         return label
@@ -68,7 +68,7 @@ class JobTableViewCell: UITableViewCell {
         }
     }
     
-    func configure(with job: job) {
+    func configure(with job: Job) {
         titleLabel.text = job.jobTitle
         companyNameLabel.text = job.companyName
         

@@ -14,14 +14,14 @@ class NetworkService {
     
     private let provider = MoyaProvider<NetworkProvider>()
     
-    func fetchJobs(callBack: @escaping (Result<[job]>)-> Void) -> Void {
+    func fetchJobs(callBack: @escaping (Result<[Job]>)-> Void) -> Void {
         provider.request(.remoteJobs) { result in
             switch result {
             case let .success(moyaResponse):
                 let data = moyaResponse.data
                 let statusCode = moyaResponse.statusCode
                 if statusCode == 200 {
-                    let jobsResponse = try! JSONDecoder().decode(apiResponse.self, from: data)
+                    let jobsResponse = try! JSONDecoder().decode(APIResponse.self, from: data)
                     callBack(.success(value: jobsResponse.jobs))
                 } else {
                     callBack(.failure(error: "something went wrong"))
