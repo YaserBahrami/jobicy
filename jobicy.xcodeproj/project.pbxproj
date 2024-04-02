@@ -19,7 +19,6 @@
 		4305D6A82BBB44770053E120 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D6A72BBB44770053E120 /* NetworkService.swift */; };
 		4305D6AA2BBB454D0053E120 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305D6A92BBB454D0053E120 /* Result.swift */; };
 		4364BB1C2BBC19D200B1F50F /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364BB1B2BBC19D200B1F50F /* FavoriteViewController.swift */; };
-		4364BB1E2BBC19E900B1F50F /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364BB1D2BBC19E900B1F50F /* FavoriteViewModel.swift */; };
 		4364BB202BBC1AD700B1F50F /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364BB1F2BBC1AD700B1F50F /* JobTableViewCell.swift */; };
 		DBD94C88EAD99998D4D6A24B /* Pods_jobicy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F367F08A3C64AED021FF942E /* Pods_jobicy.framework */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		4305D6A72BBB44770053E120 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		4305D6A92BBB454D0053E120 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		4364BB1B2BBC19D200B1F50F /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		4364BB1D2BBC19E900B1F50F /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		4364BB1F2BBC1AD700B1F50F /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		50FC24613181F3F52699B0D0 /* Pods-jobicy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jobicy.debug.xcconfig"; path = "Target Support Files/Pods-jobicy/Pods-jobicy.debug.xcconfig"; sourceTree = "<group>"; };
 		841F1AB4DDED0DDC4FFC8C36 /* Pods-jobicy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jobicy.release.xcconfig"; path = "Target Support Files/Pods-jobicy/Pods-jobicy.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				4305D6A32BBB44300053E120 /* RemoteJobViewModel.swift */,
-				4364BB1D2BBC19E900B1F50F /* FavoriteViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -272,7 +269,6 @@
 				4305D6A62BBB44520053E120 /* RemoteJobViewController.swift in Sources */,
 				4305D6882BBB34770053E120 /* AppDelegate.swift in Sources */,
 				4305D68A2BBB34770053E120 /* SceneDelegate.swift in Sources */,
-				4364BB1E2BBC19E900B1F50F /* FavoriteViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

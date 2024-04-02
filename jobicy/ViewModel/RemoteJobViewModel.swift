@@ -11,7 +11,7 @@ class RemoteJobViewModel {
     
     private var jobs: [Job] = []
     
-    var favoriteJobs: [Job] = []
+    private var favoriteJobs: [Job] = []
     
     init() {
         loadFavorites()
@@ -38,6 +38,10 @@ class RemoteJobViewModel {
         }
     }
     
+    func getFavoriteJobs() -> [Job] {
+        return favoriteJobs
+    }
+    
     func addToFavorites(_ job: Job) {
         if !favoriteJobs.contains(where: { $0.id == job.id }) {
             
@@ -60,18 +64,14 @@ class RemoteJobViewModel {
         updateJobsWithFavorites()
     }
     
-    private func loadFavorites() {
+    func loadFavorites() {
         if let data = UserDefaults.standard.data(forKey: "FavoriteJobs"),
            let savedFavorites = try? JSONDecoder().decode([Job].self, from: data) {
             favoriteJobs = savedFavorites
-            print(favoriteJobs)
         }
     }
     
     private func updateJobsWithFavorites() {
-        print(favoriteJobs.count)
-        print(jobs.count)
-        print(self.jobs.count)
         for index in 0..<jobs.count {
             let job = jobs[index]
 

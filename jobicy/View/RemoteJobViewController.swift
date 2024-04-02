@@ -15,7 +15,13 @@ class RemoteJobViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        fetchJobs()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.fetchJobs()
+        self.viewModel.loadFavorites()
+        tableView.reloadData()
     }
     
     private func setupTableView() {
