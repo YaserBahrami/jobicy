@@ -37,6 +37,8 @@
 		4305D6A52BBB44520053E120 /* RemoteJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteJobViewController.swift; sourceTree = "<group>"; };
 		4305D6A72BBB44770053E120 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		4305D6A92BBB454D0053E120 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		43598EEC2BBC937E007B494B /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		43598EED2BBC944C007B494B /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		4364BB1B2BBC19D200B1F50F /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		4364BB1F2BBC1AD700B1F50F /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		50FC24613181F3F52699B0D0 /* Pods-jobicy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jobicy.debug.xcconfig"; path = "Target Support Files/Pods-jobicy/Pods-jobicy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		4305D67B2BBB34770053E120 = {
 			isa = PBXGroup;
 			children = (
+				43598EEC2BBC937E007B494B /* Readme.md */,
 				4305D6862BBB34770053E120 /* jobicy */,
 				4305D6852BBB34770053E120 /* Products */,
 				7F65D91FDD20608FB6080193 /* Pods */,
@@ -77,6 +80,7 @@
 		4305D6862BBB34770053E120 /* jobicy */ = {
 			isa = PBXGroup;
 			children = (
+				43598EED2BBC944C007B494B /* Resources */,
 				4305D69E2BBB39DD0053E120 /* NetworkLayer */,
 				4305D69B2BBB394D0053E120 /* Model */,
 				4305D69C2BBB39C00053E120 /* View */,
