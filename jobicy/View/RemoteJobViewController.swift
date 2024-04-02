@@ -12,11 +12,8 @@ class RemoteJobViewController: UIViewController {
     private let viewModel = RemoteJobViewModel()
     private let tableView = UITableView()
     
-    private var jobs: [Job] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Start")
         setupTableView()
         fetchJobs()
     }
@@ -24,17 +21,22 @@ class RemoteJobViewController: UIViewController {
     private func setupTableView() {
         view.addSubview(tableView)
         tableView.register(JobTableViewCell.self, forCellReuseIdentifier: "JobCell")
-        tableView.tableFooterView = UIView()
         
-        tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
         
-        // Enable automatic row height
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 200 // Adjust the estimated row height as needed
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.isUserInteractionEnabled = true
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(8)
+            make.leading.equalToSuperview().offset(8)
+            make.trailing.equalToSuperview().offset(-8)
+            make.bottom.equalToSuperview().offset(-8)
+        }
+        
         
     }
     
@@ -50,15 +52,34 @@ class RemoteJobViewController: UIViewController {
 extension RemoteJobViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        print(viewModel.numberOfJobs)
         return viewModel.numberOfJobs
     }
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath) as! JobTableViewCell
-            let job = viewModel.job(at: indexPath.row)
-            print(job)
-            cell.configure(with: job)
-            return cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath) as! JobTableViewCell
+        let job = viewModel.job(at: indexPath.row)
+        cell.configure(with: job)
+        
+        // Handle favorite button tap
+        cell.favoriteButtonTapped = { [weak self] in
+            if job.isFavorite! {
+                self?.viewModel.removeFromFavorites(job)
+                cell.updateFavoriteButtonImage(isFavorite: false)
+                self?.tableView.reloadData()
+                
+                
+            } else {
+                self?.viewModel.addToFavorites(job)
+                cell.updateFavoriteButtonImage(isFavorite: true)
+                self?.tableView.reloadData()
+            }
         }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        tableView.rowHeight = UITableView.automaticDimension
+        return 120
+    }
 }

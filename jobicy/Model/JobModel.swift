@@ -17,4 +17,5 @@ struct Job: Codable {
     var jobTitle: String
     var companyName: String
     var companyLogo: String
+    var isFavorite: Bool? = false
 }
